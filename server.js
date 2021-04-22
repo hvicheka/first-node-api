@@ -9,7 +9,6 @@ const dbConfig = require('./config/database.config.js')
 
 const noteRoutes = require('./app/routes/note.routes.js')
 
-
 mongoose.Promise = global.Promise
 
 // Connecting to the database
@@ -29,7 +28,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.use('/notes', noteRoutes)
-
 
 // define a simple route
 app.get('/', (req, res) => {
